@@ -1,8 +1,6 @@
 # Circ json
 
-Json (=readable) inspired serializer.
-
-> Please note that Circ json is currently under development and not yet suited for production
+Json (readable) inspired serializer for cyclic objects.
 
 ## Installation
 
@@ -12,12 +10,22 @@ Json (=readable) inspired serializer.
 
 ## Usage
 
-
+Analog to `JSON`
 
 ```ts
-import circJson from "circ-json"
+import { stringify, parse } from "circ-json"
 
-circJson()
+const c = {
+  a: 1,
+  b: {i: 1}
+}
+
+c.c = c
+c.bb = c.b
+
+const s = stringify(c) //{"a":1,"b":{"i":1},"c":{"$ref":"#"},"bb":{"$ref":"#/b"}}
+
+deepEqual(parse(s), c) // true
 ```
 
 ## Contribute
