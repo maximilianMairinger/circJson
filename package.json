@@ -1,6 +1,6 @@
 {
   "name": "circ-json",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Json (=readable) inspired serializer.",
   "main": "./app/dist/esm/circJson.mjs",
   "types": "./app/dist/esm/circJson.d.ts",
