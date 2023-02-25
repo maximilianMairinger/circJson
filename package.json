@@ -2,14 +2,14 @@
   "name": "circ-json",
   "version": "1.0.1",
   "description": "Json (=readable) inspired serializer.",
-  "main": "./app/dist/esm/circJson.js",
+  "main": "./app/dist/esm/circJson.mjs",
   "types": "./app/dist/esm/circJson.d.ts",
   "exports": {
     "node": {
-      "import": "./app/dist/esm/circJson.js",
+      "import": "./app/dist/esm/circJson.mjs",
       "require": "./app/dist/cjs/circJson.js"
     },
-    "default": "./app/dist/esm/circJson.js"
+    "default": "./app/dist/esm/circJson.mjs"
   },
   "scripts": {
     "build": "del-cli app/dist && rollup --config rollup.prod.config.js && renamer --find /\\.js$/i --replace .mjs app/dist/esm/**",
