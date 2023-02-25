@@ -4,7 +4,6 @@
   "description": "Json (=readable) inspired serializer.",
   "main": "./app/dist/esm/circJson.js",
   "types": "./app/dist/esm/circJson.d.ts",
-  "bin": "./app/dist/esm/cli/circJson-cli.js",
   "exports": {
     "node": {
       "import": "./app/dist/esm/circJson.js",
@@ -28,13 +27,13 @@
     "url": "git+https://github.com/maximilianMairinger/circJson.git"
   },
   "keywords": [
-  "circular",
-  "circ",
-  "recursive",
-  "json",
-  "object",
-  "serializer"
-],
+    "circular",
+    "circ",
+    "recursive",
+    "json",
+    "object",
+    "serializer"
+  ],
   "author": "maximilianMairinger",
   "license": "ISC",
   "bugs": {
@@ -58,6 +57,7 @@
     "webpack-merge": "^5.0.9"
   },
   "dependencies": {
+    "json-decycle": "^3.0.0",
     "req-package-json": "^2.0.0"
   }
 }
