@@ -1,6 +1,6 @@
 {
   "name": "circ-json",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Json (=readable) inspired serializer.",
   "main": "./app/dist/esm/circJson.js",
   "types": "./app/dist/esm/circJson.d.ts",
@@ -56,7 +56,5 @@
     "typescript": "^4.0.2",
     "webpack-merge": "^5.0.9"
   },
-  "dependencies": {
-
-  }
+  "dependencies": {}
 }
