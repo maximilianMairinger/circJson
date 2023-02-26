@@ -26,7 +26,9 @@ export function decycle() {
        $ref[sym] = true
        return { $ref }
      } else {
-       paths.set(value, [...paths.get(this) ?? [], key])
+       let r = paths.get(this)
+       r = r === undefined ? [] : r
+       paths.set(value, [...r, key])
      }
    }
 
