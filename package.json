@@ -1,6 +1,6 @@
 {
   "name": "circ-json",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Json (=readable) inspired serializer.",
   "main": "./app/dist/esm/circJson.mjs",
   "types": "./app/dist/esm/circJson.d.ts",
@@ -14,7 +14,6 @@
   "scripts": {
     "build": "del-cli app/dist && concurrently \"npm run buildESM\" \"npm run buildCJS\" --raw",
     "buildESM": "tsc -p ./tsconfig.prod.esm.json && mjsify app/dist esm cjs",
-    
     "buildCJS": "npm run buildCJS1 && npm run buildCJS2",
     "buildCJS1": "tsc -p ./tsconfig.prod.cjs.json",
     "buildCJS2": "rollup --config rollup.cjs.prod.config.mjs",
